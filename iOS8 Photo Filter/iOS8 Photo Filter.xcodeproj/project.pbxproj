@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3382AFF723426243007AC517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFF623426243007AC517 /* AppDelegate.swift */; };
 		3382AFF923426243007AC517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFF823426243007AC517 /* SceneDelegate.swift */; };
-		3382AFFB23426243007AC517 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFFA23426243007AC517 /* ViewController.swift */; };
+		3382AFFB23426243007AC517 /* ImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFFA23426243007AC517 /* ImageFilterViewController.swift */; };
 		3382AFFE23426243007AC517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3382AFFC23426243007AC517 /* Main.storyboard */; };
 		3382B00023426245007AC517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3382AFFF23426245007AC517 /* Assets.xcassets */; };
 		3382B00323426245007AC517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3382B00123426245007AC517 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		3382AFF323426243007AC517 /* iOS8 Photo Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8 Photo Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3382AFF623426243007AC517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3382AFF823426243007AC517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3382AFFA23426243007AC517 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3382AFFA23426243007AC517 /* ImageFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterViewController.swift; sourceTree = "<group>"; };
 		3382AFFD23426243007AC517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3382AFFF23426245007AC517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3382B00223426245007AC517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				3382AFF623426243007AC517 /* AppDelegate.swift */,
 				3382AFF823426243007AC517 /* SceneDelegate.swift */,
-				3382AFFA23426243007AC517 /* ViewController.swift */,
+				3382AFFA23426243007AC517 /* ImageFilterViewController.swift */,
 				3382AFFC23426243007AC517 /* Main.storyboard */,
 				3382AFFF23426245007AC517 /* Assets.xcassets */,
 				3382B00123426245007AC517 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3382AFFB23426243007AC517 /* ViewController.swift in Sources */,
+				3382AFFB23426243007AC517 /* ImageFilterViewController.swift in Sources */,
 				3382AFF723426243007AC517 /* AppDelegate.swift in Sources */,
 				3382AFF923426243007AC517 /* SceneDelegate.swift in Sources */,
 			);
