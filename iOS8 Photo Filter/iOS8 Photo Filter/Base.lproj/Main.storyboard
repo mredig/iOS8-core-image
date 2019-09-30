@@ -115,6 +115,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rEz-i0-wvg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="a7q-MM-Qar">
+                            <connections>
+                                <action selector="resetButtonPressed:" destination="BYZ-38-t0r" id="Vs3-yh-E29"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Choose Photo" id="p02-oN-5jl">
                             <connections>
                                 <action selector="choosePhotoPressed:" destination="BYZ-38-t0r" id="FQY-cP-Caj"/>
