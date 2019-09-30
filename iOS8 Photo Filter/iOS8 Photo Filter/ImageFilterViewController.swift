@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreImage
+import Photos
 
 class ImageFilterViewController: UIViewController {
 
@@ -26,6 +27,16 @@ class ImageFilterViewController: UIViewController {
 
 	private var originalImage: UIImage? {
 		didSet {
+			guard let image = originalImage else { return }
+			let scale = UIScreen.main.scale
+			var maxSize = imageView.bounds.size
+			maxSize = CGSize(width: maxSize.width * scale, height: maxSize.height * scale)
+			scaledImage = image.imageByScaling(toSize: maxSize)
+		}
+	}
+
+	private var scaledImage: UIImage? {
+		didSet {
 			updateImage()
 		}
 	}
@@ -33,10 +44,14 @@ class ImageFilterViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		originalImage = imageView.image
+
+		print("Screen: \(UIScreen.main.bounds) scale: \(UIScreen.main.scale)")
+		// research scale vs nativeScale
+		print("imageView: \(imageView.bounds)")
 	}
 
 	private func updateImage() {
-		if let image = originalImage {
+		if let image = scaledImage {
 			imageView.image = filterImage(image)
 		}
 	}
@@ -54,10 +69,12 @@ class ImageFilterViewController: UIViewController {
 		updateImage()
 	}
 
+	// MARK: - Button actions
 	@IBAction func choosePhotoPressed(_ sender: UIBarButtonItem) {
 	}
 
 	@IBAction func savePhotoPressed(_ sender: UIButton) {
+		saveFilteredPhoto()
 	}
 
 	@IBAction func resetButtonPressed(_ sender: UIBarButtonItem) {
@@ -67,8 +84,10 @@ class ImageFilterViewController: UIViewController {
 		updateImage()
 	}
 
+	// MARK: - business logic
 	func filterImage(_ image: UIImage) -> UIImage {
 		guard let ciImage = CIImage(image: image) else { fatalError("No Image available") }
+		print(image.size)
 
 		filter.setValue(ciImage, forKey: kCIInputImageKey)
 		filter.setValue(brightnessSlider.value as NSNumber, forKey: kCIInputBrightnessKey)
@@ -80,5 +99,23 @@ class ImageFilterViewController: UIViewController {
 		return UIImage(cgImage: cgImageResult)
 	}
 
+	func saveFilteredPhoto() {
+		guard let image = originalImage else { return }
+		let filteredImage = filterImage(image)
+
+		PHPhotoLibrary.requestAuthorization { (status) in
+			guard status == .authorized else { fatalError("not authorized") }
+
+			PHPhotoLibrary.shared().performChanges({
+				PHAssetCreationRequest.creationRequestForAsset(from: filteredImage)
+			}) { (success, error) in
+				if let error = error {
+					print("There was an error saving the image to photos: \(error)")
+				}
+				// TODO: present alert if applicable
+				print("saved photo")
+			}
+		}
+	}
 }
 

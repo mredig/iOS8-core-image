@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330F3433234279B40058A059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFF823426243007AC517 /* SceneDelegate.swift */; };
+		330F343523427C280058A059 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F343423427C280058A059 /* UIImage+Scaling.swift */; };
 		3382AFF723426243007AC517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFF623426243007AC517 /* AppDelegate.swift */; };
-		3382AFF923426243007AC517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFF823426243007AC517 /* SceneDelegate.swift */; };
 		3382AFFB23426243007AC517 /* ImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382AFFA23426243007AC517 /* ImageFilterViewController.swift */; };
 		3382AFFE23426243007AC517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3382AFFC23426243007AC517 /* Main.storyboard */; };
 		3382B00023426245007AC517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3382AFFF23426245007AC517 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330F343423427C280058A059 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		3382AFF323426243007AC517 /* iOS8 Photo Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8 Photo Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3382AFF623426243007AC517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3382AFF823426243007AC517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				3382AFFF23426245007AC517 /* Assets.xcassets */,
 				3382B00123426245007AC517 /* LaunchScreen.storyboard */,
 				3382B00423426245007AC517 /* Info.plist */,
+				330F343423427C280058A059 /* UIImage+Scaling.swift */,
 			);
 			path = "iOS8 Photo Filter";
 			sourceTree = "<group>";
@@ -139,8 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3382AFFB23426243007AC517 /* ImageFilterViewController.swift in Sources */,
+				330F343523427C280058A059 /* UIImage+Scaling.swift in Sources */,
 				3382AFF723426243007AC517 /* AppDelegate.swift in Sources */,
-				3382AFF923426243007AC517 /* SceneDelegate.swift in Sources */,
+				330F3433234279B40058A059 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = "iOS8 Photo Filter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = "iOS8 Photo Filter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
